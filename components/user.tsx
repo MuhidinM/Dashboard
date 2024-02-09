@@ -5,7 +5,7 @@ import Link from "next/link";
 export const User = () => {
   return (
     <Avatar>
-      <AvatarImage src="https://github.com/shadcn.png" />
+      <AvatarImage src="https://github.com/muhidinm.png" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
   );

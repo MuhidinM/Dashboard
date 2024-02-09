@@ -15,11 +15,11 @@ import {
 } from "@radix-ui/react-icons";
 
 export const Navbar = () => {
-  const [small, setSmall] = useState(true);
+  const [small, setSmall] = useState(false);
   return (
     <aside
       className={cn(
-        "bg-gray-100 flex w-72 border-r-2 dark:border-gray-500",
+        "bg-gray-100 flex w-72 border-r-2 dark:border-gray-700",
         small && "w-20"
       )}
     >
@@ -111,6 +111,7 @@ export const Navbar = () => {
                 <p>Name Name</p>
                 <span className="text-xs text-gray-400">mail@email.com</span>
               </div>
+              <div className={cn("flex flex-col", small && "hidden")}></div>
             </div>
           </div>
         </div>

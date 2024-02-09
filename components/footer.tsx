@@ -1,26 +1,6 @@
+import { links } from "@/constants";
 import Link from "next/link";
-import React, { ReactElement } from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-  FaGlobe,
-} from "react-icons/fa";
-
-export interface FooterItem {
-  name: string;
-  ref: string;
-  icon: ReactElement;
-}
-
-const links: FooterItem[] = [
-  { name: "Facebook", ref: "/", icon: <FaFacebook /> },
-  { name: "Instagram", ref: "/", icon: <FaInstagram /> },
-  { name: "Twitter", ref: "/", icon: <FaTwitter /> },
-  { name: "GitHub", ref: "/", icon: <FaGithub /> },
-  { name: "Site", ref: "/", icon: <FaGlobe /> },
-];
+import React from "react";
 
 export const Footer = () => {
   return (

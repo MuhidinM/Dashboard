@@ -13,8 +13,10 @@ import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const path = usePathname();
   const [small, setSmall] = useState(false);
   return (
     <aside
@@ -48,17 +50,23 @@ export const Navbar = () => {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-between pb-2 mb-2">
+          <div className="flex items-center justify-between mb-2">
             <ul className="space-y-2 font-medium w-full">
               {sideBar.map(
                 (item) =>
                   !item.hide && ( // Render the list item only if item.hidden is false
-                    <li key={item.name}>
+                    <li
+                      key={item.name}
+                      className="rounded-md border border-gray-500"
+                    >
                       <Link
                         href={item.path}
                         className={cn(
-                          "flex items-center p-2 text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500 hover:bg-gray-100 dark:hover:bg-gray-700 group",
-                          small && "justify-center "
+                          "flex items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 group",
+                          small && "justify-center ",
+                          item.path === path && "text-cyan-600",
+                          item.path !== path &&
+                            "text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500"
                         )}
                       >
                         {item.icon}

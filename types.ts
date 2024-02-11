@@ -6,7 +6,6 @@ export interface SideBarItem {
   icon: ReactElement;
   hide: boolean; // set the hidden value to true if you want to. U can use different var for different purposes.
   path: string;
-  active: string;
 }
 
 export interface FooterItem {

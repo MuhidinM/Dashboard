@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 import { User } from "./user";
 import { sideBar } from "@/constants";
 import Logo from "./logo";
-import { ModeToggle } from "./theme-togle";
+import { ModeToggle } from "./theme-toggle";
 import { cn } from "@/lib/utils";
 import {
   DoubleArrowLeftIcon,

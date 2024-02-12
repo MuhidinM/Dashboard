@@ -86,8 +86,8 @@ export const Navbar = () => {
               <ul className="space-y-2 font-medium w-full ">
                 <li>
                   <Link
-                    href="/merchants/setting"
-                    className="flex border dark:border-gray-400 justify-center items-center p-2 text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500 hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    href="/setting"
+                    className="flex border border-gray-500 justify-center items-center p-2 text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500 hover:bg-gray-100 dark:hover:bg-gray-700 group"
                   >
                     <CiSettings size={20} />
                     <span className={cn("ms-3", small && "hidden")}>
@@ -109,7 +109,7 @@ export const Navbar = () => {
               className={cn(
                 small
                   ? "flex justify-center"
-                  : "flex justify-between border dark:border-white p-2 rounded-lg items-center"
+                  : "flex justify-between border border-gray-500 p-2 rounded-lg items-center"
               )}
             >
               <div className="flex">

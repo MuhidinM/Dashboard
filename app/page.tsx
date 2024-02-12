@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,13 +18,8 @@ import { Search } from "@/components/search";
 import TeamSwitcher from "@/components/team-switcher";
 import { UserNav } from "@/components/user-nav";
 
-import Image from "next/image";
 
-// export default function Home() {
-//   return <main>hello</main>;
-// }
-
-export default function DashboardPage() {
+export default function Home() {
   return (
     <>
       <div className="md:hidden">

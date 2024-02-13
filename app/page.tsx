@@ -21,7 +21,7 @@ import { UserNav } from "@/components/user-nav";
 export default function Home() {
   return (
     <>
-      <div className="flex-col md:flex">
+      <div className="flex-col md:flex m-8 bg-gray-50 border border-gray-500 rounded-lg ">
         <div className="border-b">
           <div className="flex h-16 items-center px-4">
             <TeamSwitcher />

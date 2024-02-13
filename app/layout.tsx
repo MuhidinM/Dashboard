@@ -38,7 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen bg-gray-50 dark:bg-gray-800">
+          <div className="flex min-h-screen bg-gray-100 dark:bg-gray-800">
             <Navbar />
             <div className="flex flex-col min-h-screen w-full border">
               {children}

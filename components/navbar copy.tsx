@@ -16,7 +16,7 @@ import {
 import { usePathname } from "next/navigation";
 import { Footer } from "./footer";
 
-export const Navbar = ({ click }: { click: any }) => {
+export const Navbar = ({ click, small }: { click: any; small: any }) => {
   const path = usePathname();
   return (
     <div>
@@ -40,7 +40,7 @@ export const Navbar = ({ click }: { click: any }) => {
       <aside
         className={cn(
           "fixed top-0 left-0 h-screen w-64 flex transition-transform -translate-x-full sm:translate-x-0 shadow-sm",
-          click.small && "w-20"
+          small && "w-20"
         )}
       >
         <div className="h-full w-full flex flex-col justify-between px-3 py-4 bg-gray-50 dark:bg-gray-800 overflow-hidden">
@@ -48,29 +48,19 @@ export const Navbar = ({ click }: { click: any }) => {
             <div
               className={cn(
                 "flex items-center justify-between pb-2 mb-2",
-                click.small && "flex-col space-y-2"
+                small && "flex-col space-y-2"
               )}
             >
-              <Logo href="/" small={click.small ? true : false} />
+              <Logo href="/" small={small ? true : false} />
               <div
                 className={cn(
                   "flex items-center",
-                  click.small
-                    ? "flex-col justify-center space-y-2"
-                    : "space-x-2"
+                  small ? "flex-col justify-center space-y-2" : "space-x-2"
                 )}
               >
                 <ModeToggle />
-                <Button
-                  size={"icon"}
-                  variant="outline"
-                  onClick={() => click.setSmall(!click.small)}
-                >
-                  {click.small ? (
-                    <DoubleArrowRightIcon />
-                  ) : (
-                    <DoubleArrowLeftIcon />
-                  )}
+                <Button size={"icon"} variant="outline" onClick={click}>
+                  {small ? <DoubleArrowRightIcon /> : <DoubleArrowLeftIcon />}
                 </Button>
               </div>
             </div>
@@ -87,14 +77,14 @@ export const Navbar = ({ click }: { click: any }) => {
                           href={item.path}
                           className={cn(
                             "flex items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 group",
-                            click.small && "justify-center ",
+                            small && "justify-center ",
                             item.path === path && "text-cyan-600",
                             item.path !== path &&
                               "text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500"
                           )}
                         >
                           {item.icon}
-                          <span className={cn("ms-3", click.small && "hidden")}>
+                          <span className={cn("ms-3", small && "hidden")}>
                             {item.label}
                           </span>
                         </Link>
@@ -114,7 +104,7 @@ export const Navbar = ({ click }: { click: any }) => {
                       className="flex border border-gray-500 justify-center items-center p-2 text-gray-500 rounded-lg dark:text-white hover:text-cyan-500 dark:hover:text-cyan-500 hover:bg-gray-100 dark:hover:bg-gray-700 group"
                     >
                       <CiSettings size={20} />
-                      <span className={cn("ms-3", click.small && "hidden")}>
+                      <span className={cn("ms-3", small && "hidden")}>
                         Setting
                       </span>
                     </Link>
@@ -122,7 +112,7 @@ export const Navbar = ({ click }: { click: any }) => {
                   <li>
                     <Button className="text-white bg-red-500 hover:bg-red-600 w-full">
                       <BiLogOut size={20} />
-                      <span className={cn("ms-3", click.small && "hidden")}>
+                      <span className={cn("ms-3", small && "hidden")}>
                         Log out
                       </span>
                     </Button>
@@ -131,7 +121,7 @@ export const Navbar = ({ click }: { click: any }) => {
               </div>
               <div
                 className={cn(
-                  click.small
+                  small
                     ? "flex justify-center"
                     : "flex justify-between border border-gray-500 p-2 rounded-lg items-center"
                 )}
@@ -139,13 +129,11 @@ export const Navbar = ({ click }: { click: any }) => {
                 <div className="flex">
                   <User />
                 </div>
-                <div className={cn("flex flex-col", click.small && "hidden")}>
+                <div className={cn("flex flex-col", small && "hidden")}>
                   <p>Name Name</p>
                   <span className="text-xs text-gray-400">mail@email.com</span>
                 </div>
-                <div
-                  className={cn("flex flex-col", click.small && "hidden")}
-                ></div>
+                <div className={cn("flex flex-col", small && "hidden")}></div>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export const sideBar: SideBarItem[] = [
     label: "Dashboard",
     icon: <DashboardIcon width={24} height={24} />,
     hide: false, // set the hidden value to true if you want to. U can use different var for different purposes.
-    path: "/",
+    path: "/dashboard",
   },
   {
     name: "users",

@@ -1,9 +1,9 @@
-"use client";
-import { useState } from "react";
-import { Navbar } from "./navbar copy";
+'use client'
+import { Navbar } from "@/components/navbar copy";
 import { cn } from "@/lib/utils";
+import React, { useState } from "react";
 
-export const Main = ({ children }: { children: React.ReactNode }) => {
+const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   const [small, setSmall] = useState(false);
   const changeSize = () => {
     setSmall(!small);
@@ -20,3 +20,5 @@ export const Main = ({ children }: { children: React.ReactNode }) => {
     </div>
   );
 };
+
+export default HomeLayout;

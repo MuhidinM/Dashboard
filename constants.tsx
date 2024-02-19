@@ -6,7 +6,6 @@ import {
   FaTwitter,
   FaGithub,
   FaGlobe,
-  FaPeopleArrows,
 } from "react-icons/fa";
 import { BiUser } from "react-icons/bi";
 
@@ -23,7 +22,7 @@ export const sideBar: SideBarItem[] = [
     label: "Users",
     icon: <BiUser width={24} height={24} />,
     hide: false, // set the hidden value to true if you want to. U can use different var for different purposes.
-    path: "/users",
+    path: "/dashboard/users",
   },
 ];
 

@@ -1,20 +1,19 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
 import { BiLogOut } from "react-icons/bi";
 import { CiSettings } from "react-icons/ci";
-import { Button } from "./ui/button";
-import { User } from "./user";
+import { Button } from "../../../components/ui/button";
+import { User } from "../../../components/user";
 import { sideBar } from "@/constants";
-import Logo from "./logo";
-import { ModeToggle } from "./theme-toggle";
+import Logo from "../../../components/logo";
+import { ModeToggle } from "../../../components/theme-toggle";
 import { cn } from "@/lib/utils";
 import {
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
 } from "@radix-ui/react-icons";
 import { usePathname } from "next/navigation";
-import { Footer } from "./footer";
+import { Footer } from "../../../components/footer";
 
 export const Navbar = ({ click, small }: { click: any; small: any }) => {
   const path = usePathname();

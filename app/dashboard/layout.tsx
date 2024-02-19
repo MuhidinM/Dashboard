@@ -1,5 +1,5 @@
-'use client'
-import { Navbar } from "@/components/navbar copy";
+"use client";
+import { Navbar } from "@/app/dashboard/_components/sidebar";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
